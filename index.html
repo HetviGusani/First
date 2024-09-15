@@ -1,0 +1,86 @@
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="top">
+        <h1>Registration Form</h1>
+        <p>Please fill all the text in the field.</p>
+      </div>
+      <form class="form" action="insert.php" method="post">
+        <label for="">Your Name</label><br />
+        <input
+          type="text"
+          class="name"
+          placeholder="Your Full Name"
+          name="name"
+        />
+        <br />
+        <label for="email">Email</label><br />
+        <input
+          type="Email"
+          id="email"
+          placeholder="Valid Email Address"
+          name="email"
+        />
+        <br />
+        <label>Select Your Gender</label><br />
+        <input type="radio" id="gender" name="gender" value="Male" />Male
+        <input type="radio" id="gender" name="gender" value="Female" />Female
+        <br />
+        <label>Select Your Hobby:</label><br />
+        <input
+          type="checkbox"
+          name="hobby[]"
+          id="gender"
+          value="Reading"
+        />Reading
+        <input
+          type="checkbox"
+          name="hobby[]"
+          id="gender"
+          value="Singing"
+        />Singing
+        <input
+          type="checkbox"
+          name="hobby[]"
+          id="gender"
+          value="Dancing"
+        />Dancing
+        <br />
+        <label>Address:</label><br />
+        <textarea cols="30" rows="5" name="address"></textarea>
+        <br />
+        <label>Contact No.</label><br />
+        <input type="number" name="number" id="number" />
+        <br />
+        <label for="city">Select Your City</label><br />
+        <select name="city">
+          <option value="Ahemdabad">Ahemdabad</option>
+          <option value="Rajkot">Rajkot</option>
+          <option value="Jamnagar">Jamnagar</option>
+          <option value="Gandhinagar">Gandhinagar</option>
+          <option value="Junagadh">Junagadh</option>
+        </select>
+        <br />
+        <input
+          type="submit"
+          value="Submit"
+          id="submit"
+          class="btn"
+          name="submit"
+        />
+        <input type="reset" value="Reset" id="reset" class="btn" name="reset" />
+        <span value="<?= $display ?>"></span>
+
+        <input
+          type="button"
+          class="btn"
+          value="All"
+          onclick="location.href='display.php'"
+        />
+      </form>
+    </div>
+  </body>
+</html>
